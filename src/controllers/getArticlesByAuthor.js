@@ -1,5 +1,7 @@
 function getArticlesByAuthor(author) {
-    //lógica para retornar arigos por tema
+    let authorSearch = author.join(" ");
+    return authorSearch;
+    //TODO: IMPLEMENTAR REQUISIÇÃO PARA TEMA
 }
 
 

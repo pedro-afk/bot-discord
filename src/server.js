@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const checkUserInput = require('./controllers/userInputController');
 
 require('dotenv').config()
 
@@ -8,10 +9,9 @@ client.on('ready', () => {
     console.log(`Bot ready, ${client.user.tag}!`);
 });
 
-client.on('message', msg => {
-    if (msg.content === '!gs') {
-        msg.reply('Pong!');
-    }
+client.on('message', async(msg) => {
+    const results = await checkUserInput(msg.content);
+    console.log(results);
 });
 
 client.login(process.env.TOKEN);

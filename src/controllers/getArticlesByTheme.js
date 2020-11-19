@@ -1,5 +1,8 @@
 function getArticlesByTheme(theme) {
-    //lógica para retornar arigos por autor
+    let themeSearch = theme.join(" ");
+    return themeSearch;
+
+    //TODO: IMPLEMENTAR REQUISIÇÃO PARA TEMA
 }
 
 
